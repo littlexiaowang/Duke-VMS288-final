@@ -1,272 +1,382 @@
 * {
-    margin: 0;
-  }
+  margin: 0;
+}
 
-  body {
-    font-size: 24px;
-  }
+body {
+  font-size: 24px;
+}
 
-  .content {
-    background: url(./backgroundimg.png);
-    padding-top: 128px;
-  }
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 9;
+  background: #18405c;
+  border-bottom: 1px solid #ccc;
+  padding-right: 16px;
+  color: #fff;
+}
 
-  .content-inner {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
+.h-right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
 
-  .banner {
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    display: none;
-    height: 100vh;
-    flex-direction: column;
-  }
+.switch-lang {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-left: 16px;
+  color: #fff !important;
+}
 
-  .banner-1 {
-    background: url(./elderlye.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+  margin-left: 4px;
+}
 
-  }
+.switch input {
+  display: none;
+}
 
-  .banner-2 {
-    background: url(./tiktok_magic.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
 
-  h1 {
-    font-size: 70px;
-    font-family: 'Barlow', sans-serif;
-    margin-bottom: 10px;
-    font-weight: 300;
-  }
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
 
-  .desc {
-    font-size: 28px;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 3px;
-  }
+.slider.checked {
+  background-color: #2196F3;
+}
 
-  .dot-wrap {
-    display: flex;
-    margin-top: 64px;
-  }
+.slider.checked:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
 
-  .dot-item {
-    width: 10px;
-    height: 10px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    margin: 0 8px;
-    cursor: pointer;
-  }
+.slider.round {
+  border-radius: 34px;
+}
 
-  .dot-item.active {
-    background: #fff;
-  }
+.slider.round:before {
+  border-radius: 50%;
+}
 
-  .section-1 {
-    /* text-align: center; */
-  }
+.slider-text {
+  color: #fff;
+  position: absolute;
+  left: 24px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 22px
+}
 
-  .text p {
-    padding-left: 48px;
-    text-align: center;
-  }
+.on.slider-text {
+  left: 8px;
+}
 
-  .text {
-    display: none;
-  }
+.content {
+  background: url(./backgroundimg.png);
+  padding-top: 128px;
+}
 
-  .text-1 {
-    display: block;
-  }
+.content-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
 
-  .mil-wrap {
-    display: flex;
-    justify-content: space-between;
-  }
+.banner {
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  display: none;
+  height: 100vh;
+  flex-direction: column;
+}
 
-  .mil-item {
-    width: 30%;
-  }
+.banner-1 {
+  background: url(./elderlye.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
 
-  h2 {
-    text-align: center;
-    margin-bottom: 16px;
-  }
+}
 
-  .mil-item .cover {
-    height: 200px;
-    background-color: #4b77be;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-  }
+.banner-2 {
+  background: url(./tiktok_magic.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-  .cover:hover p {
-    display: block;
-  }
+h1 {
+  font-size: 70px;
+  font-family: 'Kalam', cursive;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
 
-  .cover:hover img {
-    display: none;
-  }
+.desc {
+  font-size: 28px;
+  font-family: 'Kalam', cursive;
+  letter-spacing: 3px;
+}
 
-  .cover p {
-    display: none;
-  }
+.dot-wrap {
+  display: flex;
+  margin-top: 64px;
+}
 
-  .cont {
-    display: flex;
-    align-items: center;
-  }
+.dot-item {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0 8px;
+  cursor: pointer;
+}
 
-  .section-3 {
-    padding-bottom: 64px;
-  }
+.dot-item.active {
+  background: #fff;
+}
 
-  section {
-    margin-bottom: 128px;
-  }
+.section-1 {
+  /* text-align: center; */
+}
 
-  .btn-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
-  }
+.text p {
+  padding-left: 48px;
+  text-align: center;
+}
 
-  .btn-wrap div:hover {
-    background: rgb(221, 221, 221);
-  }
+.text {
+  display: none;
+}
 
-  .btn-wrap div {
-    cursor: pointer;
-    padding: 8px 16px;
-    margin: 0 2px;
-    box-shadow: 0 0 2px 2px rgba(223, 223, 223, 0.3);
-    font-size: 15px;
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-  }
+.text-1 {
+  display: block;
+}
 
-  .name {
-    color: #888;
-    margin: 10px 0;
-    font-size: 15px;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-  }
+.mil-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .ttt {
-    border-bottom: 1px solid rgb(168, 168, 168);
-    padding: 8px;
-    display: inline-block;
-    margin: 0 auto;
-    margin: 12px 8px;
-    color:rgb(168, 168, 168);
-    font-family:'Oswald', sans-serif;
-    letter-spacing: 2px;
-    margin-bottom: 35px;
-  }
+.mil-item {
+  width: 30%;
+}
 
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 48px;
-    color: #fff;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 0 0 4px 0;
-  }
-  .left {
-    left: 5%;
-  }
-  .right {
-    right: 5%;
-  }
-  .fonts1 {
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 2px;
-    font-size: 32px;
-    font-weight: 300;
-  }
-  .fonts2 {
-    font-family: 'Oswald', sans-serif;
-  }
-  .fonts3 {
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 2px;
-    font-size: 32px;
-    color: #fe7968;
-    font-weight: 300;
-  }
-  .fonts4 {
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 2px;
-    font-size: 28px;
-    line-height: 1.5;
-    font-weight: 300;
-  }
-  .fonts5 {
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 2px;
-    font-size: 28px;
-    line-height: 1.5;
-    margin-top: -15px;
-    font-weight: 300;
-  }
-  .fonts6 {
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 2px;
-    font-size: 28px;
-    font-weight: 300;
-    text-align: center;
-  }
-  .fonts7 {
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 1px;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .fonts8 {
-    font-family: 'Barlow', sans-serif;
-    letter-spacing: 1px;
-    font-size: 16px;
-    font-weight: 500;
-    white-space: nowrap;
-    margin-left: -8px;
-  }
-  .contactlist{
-    margin-left: 115px;
-    margin-bottom: 30px;
-    white-space: nowrap;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 2.5px;
-    font-size: 28px;
-  }
-  a:link {
-    text-decoration:none;
-    color:black;
-  }
-  a:hover {
-    text-decoration:none;
-    color:#4b77be;
-  }
-  a:visited {
-    text-decoration:none;
-    color:#4b77be;
-  }
+h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.mil-item .cover {
+  height: 200px;
+  background-color: #4b77be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.cover:hover p {
+  display: block;
+}
+
+.cover:hover img {
+  display: none;
+}
+
+.cover p {
+  display: none;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+}
+
+.section-3 {
+  padding-bottom: 64px;
+}
+
+section {
+  margin-bottom: 128px;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.btn-wrap div:hover {
+  background: rgb(221, 221, 221);
+}
+
+.btn-wrap div {
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 0 2px;
+  box-shadow: 0 0 2px 2px rgba(223, 223, 223, 0.3);
+  font-size: 15px;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.name {
+  color: #888;
+  margin: 10px 0;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.ttt {
+  border-bottom: 1px solid rgb(168, 168, 168);
+  padding: 8px;
+  display: inline-block;
+  margin: 0 auto;
+  margin: 12px 8px;
+  color: rgb(168, 168, 168);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 0 4px 0;
+}
+
+.left {
+  left: 5%;
+}
+
+.right {
+  right: 5%;
+}
+
+.fonts1 {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 2px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.fonts2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.fonts3 {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 2px;
+  font-size: 32px;
+  color: #fe7968;
+  font-weight: 300;
+}
+
+.fonts4 {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 2px;
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.fonts5 {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 2px;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-top: -15px;
+  font-weight: 300;
+}
+
+.fonts6 {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 2px;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.fonts7 {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.fonts8 {
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: -8px;
+}
+
+.contactlist {
+  margin-left: 115px;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2.5px;
+  font-size: 28px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4b77be;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #4b77be;
+}

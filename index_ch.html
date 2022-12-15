@@ -13,6 +13,26 @@
 </head>
 <script src="http://js.tagalta.com/tagalta/js/tagalta.wza1.1.js" type="text/javascript"></script>
 <body>
+
+  <header>
+    <img src="./logo.jpg" style="margin-right: 8px;" height="80px" alt="">
+
+    <span>Electronic Education Empowers Elderly</span>
+
+    <div class="h-right">
+      <font color="#ffffff" size="3px" id="assist-open">无障碍</font>
+      <a href="./index.html" class="switch-lang">
+        <div>中/En</div>
+        <label class="switch" onclick="window.location.href = './index.html'">
+          <input type="checkbox" >
+          <div class="slider round checked">
+            <span class="slider-text on">中</span>
+          </div>
+        </label>
+      </a>
+    </div>
+
+  </header>
   
   <div class="banner banner-1">
     <h1>面对面交谈</h1>
@@ -115,7 +135,7 @@
       </section>
     </div>
   </div>
-  <font color="#8B7D7B" size="3px" id="assist-open">无障碍</font>
+  
   <script>
     function banner(type) {
       const banner1 = document.querySelector('.banner-1')
